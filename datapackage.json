@@ -1,16 +1,13 @@
 {
     "name": "ddf--gapminder--co2emissions",
     "language": {
-        "name": "English",
         "id": "en"
     },
-    "title": "Co2 Emissions",
-    "description": "Co2 emission by Geo by Decile",
-    "author": "Gapminder",
-    "license": "CC-BY-4.0",
-    "translations": [],
-    "version": "0.0.1",
-    "created": "2022-10-02T02:59:10.856944+00:00",
+    "title": "ddf--gapminder--co2emissions",
+    "description": "",
+    "author": "",
+    "license": "",
+    "created": "2023-09-20T19:14:38.282291+00:00",
     "resources": [
         {
             "name": "ddf--concepts",
@@ -21,13 +18,93 @@
                         "name": "concept"
                     },
                     {
+                        "name": "name"
+                    },
+                    {
                         "name": "concept_type"
+                    }
+                ],
+                "primaryKey": "concept"
+            }
+        },
+        {
+            "name": "ddf--datapoints--co2e_per_cap--by--geo--time--decile",
+            "path": "ddf--datapoints--co2e_per_cap--by--geo--time--decile.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "decile"
+                    },
+                    {
+                        "name": "co2e_per_cap"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time",
+                    "decile"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--total_co2--by--geo--time--decile",
+            "path": "ddf--datapoints--total_co2--by--geo--time--decile.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "decile"
+                    },
+                    {
+                        "name": "total_co2"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time",
+                    "decile"
+                ]
+            }
+        },
+        {
+            "name": "ddf--entities--decile",
+            "path": "ddf--entities--decile.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "decile"
                     },
                     {
                         "name": "name"
                     }
                 ],
-                "primaryKey": "concept"
+                "primaryKey": "decile"
+            }
+        },
+        {
+            "name": "ddf--entities--geo",
+            "path": "ddf--entities--geo.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "name"
+                    }
+                ],
+                "primaryKey": "geo"
             }
         }
     ],
@@ -52,8 +129,50 @@
                 ]
             }
         ],
-        "entities": [],
-        "datapoints": [],
+        "entities": [
+            {
+                "primaryKey": [
+                    "decile"
+                ],
+                "value": "name",
+                "resources": [
+                    "ddf--entities--decile"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "name",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            }
+        ],
+        "datapoints": [
+            {
+                "primaryKey": [
+                    "decile",
+                    "geo",
+                    "time"
+                ],
+                "value": "co2e_per_cap",
+                "resources": [
+                    "ddf--datapoints--co2e_per_cap--by--geo--time--decile"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "decile",
+                    "geo",
+                    "time"
+                ],
+                "value": "total_co2",
+                "resources": [
+                    "ddf--datapoints--total_co2--by--geo--time--decile"
+                ]
+            }
+        ],
         "synonyms": []
     }
 }
