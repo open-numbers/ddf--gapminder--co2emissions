@@ -1,0 +1,6 @@
+concept,name,concept_type
+co2e_per_cap,CO2e per capita,measure
+total_co2,Total Emissions tCO2,measure
+geo,Geo,entity_domain
+name,Name,string
+time,Time,time
