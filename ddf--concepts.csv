@@ -4,3 +4,4 @@ total_co2,Total Emissions tCO2,measure
 geo,Geo,entity_domain
 name,Name,string
 time,Time,time
+decile,Decile,entity_domain

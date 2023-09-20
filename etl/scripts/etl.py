@@ -43,9 +43,9 @@ def main():
     measures_df['concept_type'] = 'measure'
 
     discrete_df = pd.DataFrame.from_dict(
-        dict(concept=['geo', 'name', 'time'],
-             name=['Geo', 'Name', 'Time'],
-             concept_type=['entity_domain', 'string', 'time'])
+        dict(concept=['geo', 'name', 'time','decile'],
+             name=['Geo', 'Name', 'Time','Decile'],
+             concept_type=['entity_domain', 'string', 'time','entity_domain'])
     )
     pd.concat([measures_df, discrete_df], ignore_index=True).to_csv(osp.join(OUT_DIR, 'ddf--concepts.csv'), index=False)
 
