@@ -7,7 +7,7 @@ from ddf_utils.io import open_google_spreadsheet, serve_datapoint
 
 
 DOCID = '1X76om-myfcX4awZcTUo95BYkya2793AEEYh1rh416Lw'
-SHEET = 'SEI_decile_data'
+SHEET = 'DDF_SEI_decile_data'
 
 DIMENSIONS = ['geo', 'time', 'decile']
 OUT_DIR = '../../'
