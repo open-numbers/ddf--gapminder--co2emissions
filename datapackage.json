@@ -7,7 +7,7 @@
     "description": "",
     "author": "",
     "license": "",
-    "created": "2023-09-27T00:08:41.822252+00:00",
+    "created": "2023-09-27T00:20:17.654683+00:00",
     "resources": [
         {
             "name": "ddf--concepts",
@@ -93,27 +93,6 @@
                     },
                     {
                         "name": "total_co2"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
-            "name": "ddf--datapoints--total_nat_co2e--by--geo--time",
-            "path": "ddf--datapoints--total_nat_co2e--by--geo--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "total_nat_co2e"
                     }
                 ],
                 "primaryKey": [
@@ -234,16 +213,6 @@
                 "value": "total_co2",
                 "resources": [
                     "ddf--datapoints--total_co2--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ],
-                "value": "total_nat_co2e",
-                "resources": [
-                    "ddf--datapoints--total_nat_co2e--by--geo--time"
                 ]
             }
         ],
