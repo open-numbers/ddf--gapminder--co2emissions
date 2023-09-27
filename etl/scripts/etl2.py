@@ -12,7 +12,7 @@ SHEET = 'DDF_SEI_total_data'
 DIMENSIONS = ['geo', 'time']
 OUT_DIR = '../../'
 
-COLUMN_TO_CONCEPT = {'Total National Emission MtCo2': 'total_nat_co2e'}
+COLUMN_TO_CONCEPT = {'Total Emissions tCO2':'total_co2'}
 
 
 def gen_datapoints(df_: pd.DataFrame):
@@ -38,7 +38,7 @@ def main():
         serve_datapoint(df, OUT_DIR, c_id)
 
         measures.append((c_id, c))
-
+    '''
     measures_df = pd.DataFrame(measures, columns=['concept', 'name'])
     measures_df['concept_type'] = 'measure'
 
@@ -48,7 +48,7 @@ def main():
              concept_type=['entity_domain', 'string', 'time'])
     )
     pd.concat([measures_df, discrete_df], ignore_index=True).to_csv(osp.join(OUT_DIR, 'ddf--concepts.csv'), index=False)
-
+    '''
     geo_df = create_geo_domain(data)
     geo_df.to_csv(osp.join(OUT_DIR, 'ddf--entities--geo.csv'), index=False)
 

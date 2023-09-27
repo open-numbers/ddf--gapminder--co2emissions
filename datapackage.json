@@ -7,7 +7,7 @@
     "description": "",
     "author": "",
     "license": "",
-    "created": "2023-09-26T23:23:02.196761+00:00",
+    "created": "2023-09-27T00:08:41.822252+00:00",
     "resources": [
         {
             "name": "ddf--concepts",
@@ -77,6 +77,27 @@
                     "geo",
                     "time",
                     "decile"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--total_co2--by--geo--time",
+            "path": "ddf--datapoints--total_co2--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "total_co2"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
                 ]
             }
         },
@@ -203,6 +224,16 @@
                 "value": "total_co2",
                 "resources": [
                     "ddf--datapoints--total_co2--by--geo--time--decile"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "total_co2",
+                "resources": [
+                    "ddf--datapoints--total_co2--by--geo--time"
                 ]
             },
             {
