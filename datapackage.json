@@ -7,7 +7,7 @@
     "description": "",
     "author": "",
     "license": "",
-    "created": "2023-09-27T00:20:17.654683+00:00",
+    "created": "2023-10-02T20:38:07.280641+00:00",
     "resources": [
         {
             "name": "ddf--concepts",
@@ -46,6 +46,31 @@
                     },
                     {
                         "name": "co2e_per_cap"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time",
+                    "decile"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--mean_income--by--geo--time--decile",
+            "path": "ddf--datapoints--mean_income--by--geo--time--decile.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "decile"
+                    },
+                    {
+                        "name": "mean_income"
                     }
                 ],
                 "primaryKey": [
@@ -192,6 +217,17 @@
                 "value": "co2e_per_cap",
                 "resources": [
                     "ddf--datapoints--co2e_per_cap--by--geo--time--decile"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "decile",
+                    "geo",
+                    "time"
+                ],
+                "value": "mean_income",
+                "resources": [
+                    "ddf--datapoints--mean_income--by--geo--time--decile"
                 ]
             },
             {
