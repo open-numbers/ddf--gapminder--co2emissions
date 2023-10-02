@@ -12,7 +12,7 @@ SHEET = 'DDF_SEI_decile_data'
 DIMENSIONS = ['geo', 'time', 'decile']
 OUT_DIR = '../../'
 
-COLUMN_TO_CONCEPT = {'CO2e per capita': 'co2e_per_cap','Total Emissions tCO2':'total_co2'}
+COLUMN_TO_CONCEPT = {'CO2e per capita': 'co2e_per_cap','Total Emissions tCO2':'total_co2','Decile Mean Income (GM)':'mean_income'}
 
 
 def gen_datapoints(df_: pd.DataFrame):
