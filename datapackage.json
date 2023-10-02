@@ -1,299 +1,288 @@
 {
-  "name": "ddf--gapminder--co2emissions",
-  "title": "ddf--gapminder--co2emissions",
-  "description": "",
-  "version": "0.0.1",
-  "language": {
-    "id": "en",
-    "name": "English"
-  },
-  "translations": [],
-  "license": "",
-  "author": "",
-  "resources": [
-    {
-      "path": "ddf--concepts.csv",
-      "name": "ddf--concepts",
-      "schema": {
-        "fields": [
-          {
-            "name": "concept"
-          },
-          {
-            "name": "name"
-          },
-          {
-            "name": "concept_type"
-          },
-          {
-            "name": "domain"
-          }
-        ],
-        "primaryKey": "concept"
-      }
+    "name": "ddf--gapminder--co2emissions",
+    "language": {
+        "id": "en"
     },
-    {
-      "path": "ddf--datapoints--co2e_per_cap--by--geo--time--decile.csv",
-      "name": "co2e_per_cap--by--geo--time--decile",
-      "schema": {
-        "fields": [
-          {
-            "name": "geo"
-          },
-          {
-            "name": "time"
-          },
-          {
-            "name": "decile"
-          },
-          {
-            "name": "co2e_per_cap"
-          }
+    "title": "ddf--gapminder--co2emissions",
+    "description": "",
+    "author": "",
+    "license": "",
+    "created": "2023-10-02T21:03:22.161247+00:00",
+    "resources": [
+        {
+            "name": "ddf--concepts",
+            "path": "ddf--concepts.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "concept"
+                    },
+                    {
+                        "name": "name"
+                    },
+                    {
+                        "name": "concept_type"
+                    },
+                    {
+                        "name": "domain"
+                    }
+                ],
+                "primaryKey": "concept"
+            }
+        },
+        {
+            "name": "ddf--datapoints--co2e_per_cap--by--geo--time--decile",
+            "path": "ddf--datapoints--co2e_per_cap--by--geo--time--decile.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "decile"
+                    },
+                    {
+                        "name": "co2e_per_cap"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time",
+                    "decile"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--mean_income--by--geo--time--decile",
+            "path": "ddf--datapoints--mean_income--by--geo--time--decile.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "decile"
+                    },
+                    {
+                        "name": "mean_income"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time",
+                    "decile"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--mean_income--by--geo--time",
+            "path": "ddf--datapoints--mean_income--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "mean_income"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--total_co2--by--geo--time--decile",
+            "path": "ddf--datapoints--total_co2--by--geo--time--decile.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "decile"
+                    },
+                    {
+                        "name": "total_co2"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time",
+                    "decile"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--total_co2--by--geo--time",
+            "path": "ddf--datapoints--total_co2--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "total_co2"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "name": "ddf--entities--decile",
+            "path": "ddf--entities--decile.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "decile"
+                    },
+                    {
+                        "name": "name"
+                    }
+                ],
+                "primaryKey": "decile"
+            }
+        },
+        {
+            "name": "ddf--entities--geo",
+            "path": "ddf--entities--geo.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "name"
+                    }
+                ],
+                "primaryKey": "geo"
+            }
+        }
+    ],
+    "ddfSchema": {
+        "concepts": [
+            {
+                "primaryKey": [
+                    "concept"
+                ],
+                "value": "concept_type",
+                "resources": [
+                    "ddf--concepts"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "concept"
+                ],
+                "value": "domain",
+                "resources": [
+                    "ddf--concepts"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "concept"
+                ],
+                "value": "name",
+                "resources": [
+                    "ddf--concepts"
+                ]
+            }
         ],
-        "primaryKey": [
-          "geo",
-          "time",
-          "decile"
-        ]
-      }
-    },
-    {
-      "path": "ddf--datapoints--mean_income--by--geo--time--decile.csv",
-      "name": "mean_income--by--geo--time--decile",
-      "schema": {
-        "fields": [
-          {
-            "name": "geo"
-          },
-          {
-            "name": "time"
-          },
-          {
-            "name": "decile"
-          },
-          {
-            "name": "mean_income"
-          }
+        "entities": [
+            {
+                "primaryKey": [
+                    "decile"
+                ],
+                "value": "name",
+                "resources": [
+                    "ddf--entities--decile"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "name",
+                "resources": [
+                    "ddf--entities--geo"
+                ]
+            }
         ],
-        "primaryKey": [
-          "geo",
-          "time",
-          "decile"
-        ]
-      }
-    },
-    {
-      "path": "ddf--datapoints--mean_income--by--geo--time.csv",
-      "name": "mean_income--by--geo--time",
-      "schema": {
-        "fields": [
-          {
-            "name": "geo"
-          },
-          {
-            "name": "time"
-          },
-          {
-            "name": "mean_income"
-          }
+        "datapoints": [
+            {
+                "primaryKey": [
+                    "decile",
+                    "geo",
+                    "time"
+                ],
+                "value": "co2e_per_cap",
+                "resources": [
+                    "ddf--datapoints--co2e_per_cap--by--geo--time--decile"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "decile",
+                    "geo",
+                    "time"
+                ],
+                "value": "mean_income",
+                "resources": [
+                    "ddf--datapoints--mean_income--by--geo--time--decile"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "mean_income",
+                "resources": [
+                    "ddf--datapoints--mean_income--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "decile",
+                    "geo",
+                    "time"
+                ],
+                "value": "total_co2",
+                "resources": [
+                    "ddf--datapoints--total_co2--by--geo--time--decile"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "total_co2",
+                "resources": [
+                    "ddf--datapoints--total_co2--by--geo--time"
+                ]
+            }
         ],
-        "primaryKey": [
-          "geo",
-          "time"
-        ]
-      }
-    },
-    {
-      "path": "ddf--datapoints--total_co2--by--geo--time--decile.csv",
-      "name": "total_co2--by--geo--time--decile",
-      "schema": {
-        "fields": [
-          {
-            "name": "geo"
-          },
-          {
-            "name": "time"
-          },
-          {
-            "name": "decile"
-          },
-          {
-            "name": "total_co2"
-          }
-        ],
-        "primaryKey": [
-          "geo",
-          "time",
-          "decile"
-        ]
-      }
-    },
-    {
-      "path": "ddf--datapoints--total_co2--by--geo--time.csv",
-      "name": "total_co2--by--geo--time",
-      "schema": {
-        "fields": [
-          {
-            "name": "geo"
-          },
-          {
-            "name": "time"
-          },
-          {
-            "name": "total_co2"
-          }
-        ],
-        "primaryKey": [
-          "geo",
-          "time"
-        ]
-      }
-    },
-    {
-      "path": "ddf--entities--decile.csv",
-      "name": "decile",
-      "schema": {
-        "fields": [
-          {
-            "name": "decile"
-          },
-          {
-            "name": "name"
-          }
-        ],
-        "primaryKey": "decile"
-      }
-    },
-    {
-      "path": "ddf--entities--geo.csv",
-      "name": "geo",
-      "schema": {
-        "fields": [
-          {
-            "name": "geo"
-          },
-          {
-            "name": "name"
-          }
-        ],
-        "primaryKey": "geo"
-      }
+        "synonyms": []
     }
-  ],
-  "ddfSchema": {
-    "datapoints": [
-      {
-        "primaryKey": [
-          "decile",
-          "geo",
-          "time"
-        ],
-        "value": "co2e_per_cap",
-        "resources": [
-          "co2e_per_cap--by--geo--time--decile"
-        ]
-      },
-      {
-        "primaryKey": [
-          "decile",
-          "geo",
-          "time"
-        ],
-        "value": "mean_income",
-        "resources": [
-          "mean_income--by--geo--time--decile"
-        ]
-      },
-      {
-        "primaryKey": [
-          "decile",
-          "geo",
-          "time"
-        ],
-        "value": "total_co2",
-        "resources": [
-          "total_co2--by--geo--time--decile"
-        ]
-      },
-      {
-        "primaryKey": [
-          "geo",
-          "time"
-        ],
-        "value": "mean_income",
-        "resources": [
-          "mean_income--by--geo--time"
-        ]
-      },
-      {
-        "primaryKey": [
-          "geo",
-          "time"
-        ],
-        "value": "total_co2",
-        "resources": [
-          "total_co2--by--geo--time"
-        ]
-      }
-    ],
-    "entities": [
-      {
-        "primaryKey": [
-          "decile"
-        ],
-        "value": "name",
-        "resources": [
-          "decile"
-        ]
-      },
-      {
-        "primaryKey": [
-          "geo"
-        ],
-        "value": "name",
-        "resources": [
-          "geo"
-        ]
-      },
-      {
-        "primaryKey": [
-          "time"
-        ],
-        "value": "mean_income",
-        "resources": [
-          "mean_income--by--geo--time"
-        ]
-      }
-    ],
-    "concepts": [
-      {
-        "primaryKey": [
-          "concept"
-        ],
-        "value": "concept_type",
-        "resources": [
-          "ddf--concepts"
-        ]
-      },
-      {
-        "primaryKey": [
-          "concept"
-        ],
-        "value": "domain",
-        "resources": [
-          "ddf--concepts"
-        ]
-      },
-      {
-        "primaryKey": [
-          "concept"
-        ],
-        "value": "name",
-        "resources": [
-          "ddf--concepts"
-        ]
-      }
-    ],
-    "synonyms": []
-  }
 }
