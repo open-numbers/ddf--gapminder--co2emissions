@@ -56,6 +56,27 @@
             }
         },
         {
+            "name": "ddf--datapoints--co2e_per_cap--by--geo--time",
+            "path": "ddf--datapoints--co2e_per_cap--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "co2e_per_cap"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
             "name": "ddf--datapoints--mean_income--by--geo--time--decile",
             "path": "ddf--datapoints--mean_income--by--geo--time--decile.csv",
             "schema": {
@@ -238,6 +259,16 @@
                 "value": "co2e_per_cap",
                 "resources": [
                     "ddf--datapoints--co2e_per_cap--by--geo--time--decile"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "co2e_per_cap",
+                "resources": [
+                    "ddf--datapoints--co2e_per_cap--by--geo--time"
                 ]
             },
             {
