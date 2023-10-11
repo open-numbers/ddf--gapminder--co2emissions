@@ -1,16 +1,13 @@
-# Co2 Emissions
+# CO2 Emissions
 
-Co2 emission by Geo by Decile
+CO₂ emission long time series by geo, time (1800-2022) and short time series by geo, decile, time (1990-2022)  
 
-To get started with DDF and learn how to use the dataset, please read the
-[introduction to DDF][1] and [DDFcsv format document][2].
-
-[1]: https://open-numbers.github.io/ddf.html
-[2]: https://docs.google.com/document/d/1aynARjsrSgOKsO1dEqboTqANRD1O9u7J_xmxy8m5jW8
 
 ## Indicators
 
-- List of indicators in this repo
+co2e_per_cap — CO2e per capita  
+total_co2 — Total Emissions tCO2  
+mean_income — Mean income  
 
 ## Definition of indicator
 
