@@ -1,7 +1,7 @@
 concept,name,concept_type,domain
 co2e_per_cap,CO2e per capita,measure,
 total_co2,Total Emissions tCO2,measure,
-mean_income,Mean income,measure,
+mean_income,Decile Mean Income (GM),measure,
 geo,Geo,entity_domain,
 name,Name,string,
 time,Time,time,

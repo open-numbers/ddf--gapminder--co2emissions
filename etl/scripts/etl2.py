@@ -12,7 +12,7 @@ SHEET = 'DDF_SEI_total_data'
 DIMENSIONS = ['geo', 'time']
 OUT_DIR = '../../'
 
-COLUMN_TO_CONCEPT = {'Total Emissions tCO2':'total_co2'}
+COLUMN_TO_CONCEPT = {'total national emission MtCo2':'total_co2'}
 
 
 def gen_datapoints(df_: pd.DataFrame):
