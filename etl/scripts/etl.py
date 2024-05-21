@@ -6,8 +6,8 @@ import pandas as pd
 from ddf_utils.io import open_google_spreadsheet, serve_datapoint
 
 
-DOCID = '1X76om-myfcX4awZcTUo95BYkya2793AEEYh1rh416Lw'
-SHEET = 'DDF_SEI_decile_data'
+DOCID = '1I-E4T06MhZMgU_yN-sT4D2Kq-jfquBTQjgxE2a-9TAU'
+SHEET = 'Output_By_Decile'
 
 DIMENSIONS = ['geo', 'time', 'decile']
 OUT_DIR = '../../'
@@ -51,6 +51,11 @@ def main():
     pd.concat([measures_df, discrete_df], ignore_index=True).to_csv(osp.join(OUT_DIR, 'ddf--concepts.csv'), index=False)
 
     geo_df = create_geo_domain(data)
+
+    # Inserting missing geos for compatibility with other datasets
+    missing_geos = pd.DataFrame({'geo':['hos','mco','smr'],'name':['Holy See','Macao','San Marino']})
+    geo_df = pd.concat([geo_df, missing_geos], ignore_index=True)
+
     geo_df.to_csv(osp.join(OUT_DIR, 'ddf--entities--geo.csv'), index=False)
 
 

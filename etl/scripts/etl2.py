@@ -6,13 +6,13 @@ import pandas as pd
 from ddf_utils.io import open_google_spreadsheet, serve_datapoint
 
 
-DOCID = '1X76om-myfcX4awZcTUo95BYkya2793AEEYh1rh416Lw'
-SHEET = 'DDF_SEI_total_data'
+DOCID = '1I-E4T06MhZMgU_yN-sT4D2Kq-jfquBTQjgxE2a-9TAU'
+SHEET = 'Output_Total'
 
 DIMENSIONS = ['geo', 'time']
 OUT_DIR = '../../'
 
-COLUMN_TO_CONCEPT = {'total national emission MtCo2':'total_co2'}
+COLUMN_TO_CONCEPT = {'total national emission tCo2':'total_co2'}
 
 
 def gen_datapoints(df_: pd.DataFrame):
