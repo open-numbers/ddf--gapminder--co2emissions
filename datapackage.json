@@ -27,7 +27,64 @@
                         "name": "domain"
                     }
                 ],
-                "primaryKey": "concept"
+                "primaryKey": [
+                    "concept"
+                ]
+            }
+        },
+        {
+            "name": "ddf--entities--decile",
+            "path": "ddf--entities--decile.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "decile"
+                    },
+                    {
+                        "name": "name"
+                    }
+                ],
+                "primaryKey": [
+                    "decile"
+                ]
+            }
+        },
+        {
+            "name": "ddf--entities--geo",
+            "path": "ddf--entities--geo.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "name"
+                    }
+                ],
+                "primaryKey": [
+                    "geo"
+                ]
+            }
+        },
+        {
+            "name": "ddf--datapoints--co2e_per_cap--by--geo--time",
+            "path": "ddf--datapoints--co2e_per_cap--by--geo--time.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "co2e_per_cap"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
             }
         },
         {
@@ -56,8 +113,8 @@
             }
         },
         {
-            "name": "ddf--datapoints--co2e_per_cap--by--geo--time",
-            "path": "ddf--datapoints--co2e_per_cap--by--geo--time.csv",
+            "name": "ddf--datapoints--mean_income--by--geo--time",
+            "path": "ddf--datapoints--mean_income--by--geo--time.csv",
             "schema": {
                 "fields": [
                     {
@@ -67,7 +124,7 @@
                         "name": "time"
                     },
                     {
-                        "name": "co2e_per_cap"
+                        "name": "mean_income"
                     }
                 ],
                 "primaryKey": [
@@ -102,8 +159,8 @@
             }
         },
         {
-            "name": "ddf--datapoints--mean_income--by--geo--time",
-            "path": "ddf--datapoints--mean_income--by--geo--time.csv",
+            "name": "ddf--datapoints--total_co2--by--geo--time",
+            "path": "ddf--datapoints--total_co2--by--geo--time.csv",
             "schema": {
                 "fields": [
                     {
@@ -113,7 +170,7 @@
                         "name": "time"
                     },
                     {
-                        "name": "mean_income"
+                        "name": "total_co2"
                     }
                 ],
                 "primaryKey": [
@@ -145,57 +202,6 @@
                     "time",
                     "decile"
                 ]
-            }
-        },
-        {
-            "name": "ddf--datapoints--total_co2--by--geo--time",
-            "path": "ddf--datapoints--total_co2--by--geo--time.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "time"
-                    },
-                    {
-                        "name": "total_co2"
-                    }
-                ],
-                "primaryKey": [
-                    "geo",
-                    "time"
-                ]
-            }
-        },
-        {
-            "name": "ddf--entities--decile",
-            "path": "ddf--entities--decile.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "decile"
-                    },
-                    {
-                        "name": "name"
-                    }
-                ],
-                "primaryKey": "decile"
-            }
-        },
-        {
-            "name": "ddf--entities--geo",
-            "path": "ddf--entities--geo.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "geo"
-                    },
-                    {
-                        "name": "name"
-                    }
-                ],
-                "primaryKey": "geo"
             }
         }
     ],
@@ -263,16 +269,6 @@
             },
             {
                 "primaryKey": [
-                    "geo",
-                    "time"
-                ],
-                "value": "co2e_per_cap",
-                "resources": [
-                    "ddf--datapoints--co2e_per_cap--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
                     "decile",
                     "geo",
                     "time"
@@ -284,16 +280,6 @@
             },
             {
                 "primaryKey": [
-                    "geo",
-                    "time"
-                ],
-                "value": "mean_income",
-                "resources": [
-                    "ddf--datapoints--mean_income--by--geo--time"
-                ]
-            },
-            {
-                "primaryKey": [
                     "decile",
                     "geo",
                     "time"
@@ -301,6 +287,26 @@
                 "value": "total_co2",
                 "resources": [
                     "ddf--datapoints--total_co2--by--geo--time--decile"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "co2e_per_cap",
+                "resources": [
+                    "ddf--datapoints--co2e_per_cap--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "mean_income",
+                "resources": [
+                    "ddf--datapoints--mean_income--by--geo--time"
                 ]
             },
             {
